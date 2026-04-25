@@ -2,27 +2,14 @@
 <html lang="it">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.png" type="image/png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="theme-color" content="#FF6B35" />
-    <meta name="description" content="Rucola - Il tuo sous-chef personale per pranzi bilanciati" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buste Paga</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <title>Rucola</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div id="root"></div>
-    <script>
-      // Cleanup legacy service workers from old builds
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.getRegistrations().then(function(regs) {
-          regs.forEach(function(reg) { reg.unregister(); });
-        });
-      }
-    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

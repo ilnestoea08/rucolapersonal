@@ -1,18 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #FF6B35;
-  --color-primary-light: #FF8F5E;
-  --color-primary-dark: #E55A2B;
-  --color-secondary: #4CAF50;
-  --color-secondary-light: #81C784;
-  --color-secondary-dark: #388E3C;
-  --color-accent: #FFB74D;
-  --color-warm-bg: #FFF8F0;
+  --color-primary: #4F46E5;
+  --color-primary-light: #6D67EF;
+  --color-primary-dark: #3730A3;
+  --color-secondary: #10B981;
+  --color-secondary-dark: #059669;
+  --color-accent: #F59E0B;
+  --color-warm-bg: #F5F5FF;
   --color-warm-card: #FFFFFF;
-  --color-warm-text: #3E2723;
-  --color-warm-muted: #8D6E63;
-  --color-danger: #EF5350;
+  --color-warm-text: #1E1B4B;
+  --color-warm-muted: #6B7280;
+  --color-danger: #EF4444;
   --font-sans: 'Nunito', system-ui, -apple-system, sans-serif;
 }
 
@@ -21,10 +20,7 @@
     @apply bg-warm-bg text-warm-text font-sans antialiased;
     -webkit-tap-highlight-color: transparent;
   }
-
-  * {
-    @apply box-border;
-  }
+  * { @apply box-border; }
 }
 
 @layer components {
@@ -32,11 +28,6 @@
     @apply bg-gradient-to-r from-primary to-primary-dark text-white font-semibold py-3 px-6 rounded-2xl
            hover:shadow-lg hover:shadow-primary/25 active:scale-[0.97] transition-all duration-200
            disabled:opacity-50 disabled:pointer-events-none;
-  }
-
-  .btn-secondary {
-    @apply bg-gradient-to-r from-secondary to-secondary-dark text-white font-semibold py-3 px-6 rounded-2xl
-           hover:shadow-lg hover:shadow-secondary/25 active:scale-[0.97] transition-all duration-200;
   }
 
   .btn-outline {
@@ -50,90 +41,30 @@
 
   .input-field {
     @apply w-full py-3 px-4 rounded-2xl border-2 border-gray-200 bg-white
-           focus:border-primary focus:outline-none focus:shadow-sm focus:shadow-primary/10 transition-all
+           focus:border-primary focus:outline-none transition-all
            placeholder:text-warm-muted/60;
   }
 
   .chip-inactive {
-    @apply inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium
+    @apply inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium
            border-2 cursor-pointer transition-all duration-200 select-none
-           border-gray-200 bg-white text-warm-muted hover:border-primary/40 hover:shadow-sm;
+           border-gray-200 bg-white text-warm-muted hover:border-primary/40;
   }
 
   .chip-active {
-    @apply inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium
+    @apply inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium
            border-2 cursor-pointer transition-all duration-200 select-none
-           border-primary bg-primary/10 text-primary shadow-sm shadow-primary/10;
+           border-primary bg-primary/10 text-primary;
   }
 
   .page-container {
-    @apply min-h-screen pb-24 px-4 pt-4 max-w-lg mx-auto;
-  }
-
-  .nav-item-active {
-    @apply flex flex-col items-center gap-0.5 text-xs font-medium transition-colors text-primary;
-  }
-
-  .nav-item-inactive {
-    @apply flex flex-col items-center gap-0.5 text-xs font-medium transition-colors text-warm-muted;
-  }
-
-  .badge {
-    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
-  }
-
-  .section-title {
-    @apply text-lg font-bold text-warm-text;
+    @apply min-h-screen pb-10 px-4 pt-6 max-w-lg mx-auto;
   }
 }
 
-/* Animations */
 @keyframes fade-in {
   from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes slide-up {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes scale-in {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
-.animate-fade-in {
-  animation: fade-in 0.3s ease-out forwards;
-}
-
-.animate-slide-up {
-  animation: slide-up 0.4s ease-out forwards;
-}
-
-.animate-scale-in {
-  animation: scale-in 0.3s ease-out forwards;
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-/* Smooth scrollbar */
-::-webkit-scrollbar {
-  width: 4px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(141, 110, 99, 0.2);
-  border-radius: 4px;
-}
+.animate-fade-in { animation: fade-in 0.25s ease-out forwards; }
