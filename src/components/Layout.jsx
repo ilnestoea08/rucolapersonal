@@ -1,12 +1,13 @@
 import { Outlet, NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Home, Refrigerator, CalendarDays, Settings } from 'lucide-react'
+import { Home, Refrigerator, CalendarDays, Receipt, Settings } from 'lucide-react'
 import PageTransition from './PageTransition'
 
 const navItems = [
   { to: '/', icon: Home, label: 'nav.home' },
   { to: '/fridge', icon: Refrigerator, label: 'nav.fridge' },
   { to: '/history', icon: CalendarDays, label: 'nav.history' },
+  { to: '/payslip', icon: Receipt, label: 'nav.payslip' },
   { to: '/settings', icon: Settings, label: 'nav.settings' }
 ]
 

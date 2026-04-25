@@ -12,6 +12,7 @@ import Settings from './pages/Settings'
 import RecipeDetail from './pages/RecipeDetail'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import Admin from './pages/Admin'
+import Payslip from './pages/Payslip'
 import Splash from './components/Splash'
 
 function PrivateRoute({ children }) {
@@ -49,6 +50,7 @@ export default function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/fridge" element={<Fridge />} />
         <Route path="/history" element={<History />} />
+        <Route path="/payslip" element={<Payslip />} />
         <Route path="/settings" element={<Settings />} />
       </Route>
     </Routes>
